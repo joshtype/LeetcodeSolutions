@@ -74,5 +74,5 @@ console.log("Test 1 (two arrays) = " + applyOperations(nums1));
 console.log("Test 1 (one array)  = " + applyOperations2(nums1));  
 // expected output: [1, 4, 0]
 console.log("Test 2 (two arrays) = " + applyOperations(nums2));   
-console.log("Test 2 (one array)  = " + applyOperations2(nums2));  
+console.log("Test 2 (one array)  = " + applyOperations2(nums2));
 // expected output: [4, 8, 5, 6, 0, 0, 0]
