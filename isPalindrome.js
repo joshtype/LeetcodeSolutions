@@ -22,7 +22,6 @@ const isPalindrome = function(s) {
 
     // STEP 4: compare input str to new str, return result
     return s === t;  // true if strings are equal, else false
-
 };
 
 // STEP 5: define test parameters
