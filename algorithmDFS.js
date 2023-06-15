@@ -1,11 +1,10 @@
 /**
  * DEPTH-FIRST SEARCH (DFS) ALGORITHM JAVASCRIPT IMPLEMENTATION
  * TIME COMPLEXITY: O(n) *n = number of nodes in tree below starting node.
- * 
- * Finds the shortest path from a starting node to a target node. Given
- * a starting node, function searches the tree below the starting node
- * and returns the target node or null if target or null if the target
- * node doesn't exist. 
+ * EXPLANATION: Finds the shortest path from a starting node to a target 
+ * node. Given a starting node to begin searching from, DFS recursively 
+ * searches the tree below the starting node and returns the node that 
+ * contains the target value, or null if the target value isn't found.
  * 
  * @param  {node}  starting node to begin search from
  * @param  {value} target value to search tree below starting node for
