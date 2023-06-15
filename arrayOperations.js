@@ -5,10 +5,12 @@
  * Step 3: Return the resulting array.
  */
 
-/**
- * SOlUTION 1 USING TWO ARRAYS
+/** 
+ * SOLUTION 1: TWO ARRAYS & THREE FOR-LOOPS
  * TIME COMPLEXITY:  0(n) increasing with size n of input array
  * SPACE COMPLEXITY: 0(n^2) as each array will require n-space
+ * @param  {number[]} nums
+ * @return {number[]}
 */
 const applyOperations = function(nums) {
     // STEP 0: declare empty array to return 
@@ -43,9 +45,11 @@ const applyOperations = function(nums) {
 };
 
 /**
- * SOLUTION 2: USING ONLY INPUT ARRAY AND TWO LOOPS
+ * SOLUTION 2: INPUT ARRAY AND TWO FOR-LOOPS
  * TIME COMPLEXITY:  0(n) increasing with size n of input array
  * SPACE COMPLEXITY: 0(n) with only one array
+ * @param  {number[]} nums
+ * @return {number[]}
 */
 const applyOperations2 = function(nums) {
     // STEP 1: iterate thru nums
