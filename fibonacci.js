@@ -12,8 +12,10 @@
 const nextFibo = function(n) {
     if(n > 1) {
         return (n-1) + (n-2);
-    } else {
+    } else if(n === 0 || n === 1) {
         return n;
+    } else {
+        return "Invalid input."
     }
 };
 
@@ -53,6 +55,8 @@ const arrFibo = function(n) {
             seq[i] = (n-1) + (n-2);
             n++;
         }
+    } else {
+        return "Invalid input."
     }
     // return arr of 15 fibo nums
     return seq;
