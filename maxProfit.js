@@ -22,7 +22,6 @@ var maxProfit = function(prices) {
     if(prices.length < 1) {
         return 0;
     }
-
     // STEP 2: while there are indices to search right of buyLow
     while(sellHigh < prices.length) {
         if(prices[buyLow] < prices[sellHigh]) {
@@ -37,7 +36,6 @@ var maxProfit = function(prices) {
         // STEP 3: increment sellHigh, re-execute loop logic to continue searching
         sellHigh++;
     }
-
     // STEP 4: after loop breaks, maxProfit is found, or 0 if not possible
     return maxProfit;
 };
@@ -51,13 +49,13 @@ var prices2 = [9, 8, 7, 6, 5, 4, 3, 2, 1];
 var max1 = maxProfit(prices1);  // expected output: 8 (max = 9, min = 1, maxProfit = max -  min)
 var max2 = maxProfit(prices2);  // expected output: 0 (no profit possible as min appears in last index)
 if(max1 > 0) {
-    console.log("The maximum profit possible is " + max1);  
+    console.log("Test 1: Maximum profit possible = " + max1 + ".");  
 } else {
-    console.log("No profit is possible.");  
+    console.log("Test 1: Warning! Profit is not possible!");  
 }
 if(max2 > 0) {
-    console.log("The maximum profit possible is " + max2);  
+    console.log("Test 2: Maximum profit possible = " + max2 + ".");  
 } else {
-    console.log("No profit is possible.");  
+    console.log("Test 2: Warning! Profit is not possible!");  
 }
 
