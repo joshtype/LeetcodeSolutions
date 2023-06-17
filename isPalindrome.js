@@ -1,5 +1,5 @@
 /**
- * Leetcode Problem: isPalindrome in Javascript.
+ * LEETCODE PROBLEM: isPalindrome Javascript Solution
  * Return true if the string argument is a palindrome, false otherwise.
  * Palindromes read the same forwards and backwards.
  * Remove all non-alphanumeric chars and convert to all lowercase.

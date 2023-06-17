@@ -1,14 +1,15 @@
 /**
- * LeetCode Problem: applyOperations using Javascript
- * Step 1: if nums[i] == nums[i + 1] then multiply nums[i] * 2 and set nums[i + 1] to 0.
- * Step 2: After all operations are applied, shift every 0 to the end of the array.
- * Step 3: Return the resulting array.
+ * LEETCODE PROBLEM: applyOperations Javascript Solution
+ * Apply the following operations to the input array:
+ * 1) if nums[i] == nums[i + 1] then multiply nums[i] * 2 and set nums[i + 1] to 0,
+ * 2) after all operations are applied, shift every 0 to the end of the array,
+ * 3) return the resulting array.
  */
 
 /** 
- * SOLUTION 1: TWO ARRAYS & THREE FOR-LOOPS
- * TIME COMPLEXITY:  0(n) increasing with size n of input array
- * SPACE COMPLEXITY: 0(n^2) as each array will require n-space
+ * SOLUTION 1: USING TWO ARRAYS & THREE FOR-LOOPS
+ * TIME COMPLEXITY:  0(n) increasing with size n of input array.
+ * SPACE COMPLEXITY: 0(n^2) with two arrays requiring n*n space.
  * @param  {number[]} nums
  * @return {number[]}
 */
@@ -45,9 +46,9 @@ const applyOperations = function(nums) {
 };
 
 /**
- * SOLUTION 2: INPUT ARRAY AND TWO FOR-LOOPS
- * TIME COMPLEXITY:  0(n) increasing with size n of input array
- * SPACE COMPLEXITY: 0(n) with only one array
+ * SOLUTION 2: USING THE INPUT ARRAY AND TWO FOR-LOOPS
+ * TIME COMPLEXITY:  0(n) increasing with size n of input array.
+ * SPACE COMPLEXITY: 0(n) with one array requiring n space.
  * @param  {number[]} nums
  * @return {number[]}
 */

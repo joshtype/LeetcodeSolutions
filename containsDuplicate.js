@@ -1,7 +1,6 @@
 /**
- * Leetcode Problem containsDuplicate in Javascript.
- * Return true if any value in the input array is repeated.
- * Return false if all values in the input array are unique.
+ * LEETCODE PROBLEM: containsDuplicate Javascript Solution
+ * Returns true if any value in the input array is repeated, false if all values are unique.
  * @param {number[]} nums
  * @return {boolean}
  */
@@ -14,15 +13,13 @@ var containsDuplicate = function(nums) {
 };
 
     /**
-     * Solution Explanation:
-     * Sets can only contain unique elements. By passing
-     * the input array through the set constructor, any repeated
-     * elements in the array are dropped and are not added to 
-     * the set. Thus, the set's size and the array's length
-     * can only be equal if each element in the array was added
-     * to the set. If they are not equal, one or more values must
-     * have been repeated and not added to the set, resulting in 
-     * a larger array length compared to set size.
+     * Explanation:
+     * Sets can only contain unique elements. By passing the input array through a 
+     * set constructor, any repeated elements in the array are dropped and are not
+     * to the set. Thus, the set's size and the array's length can only be equal if
+     * each element in the array was added to the set. If they are not equal, then
+     * one or more values in the array must have been a duplicate and not added to
+     * the set, resulting in a larger array length compared to set size. 
      */
 
 // STEP 2: define test parameters
