@@ -1,8 +1,13 @@
 /**
- * LEETCODE PROBLEM: isPalindrome Javascript Solution
- * Return true if the string argument is a palindrome, false otherwise.
- * Palindromes read the same forwards and backwards.
- * Remove all non-alphanumeric chars and convert to all lowercase.
+ * LEETCODE PROBLEM: isPalindrome Javascript Solution:
+ * TIME COMPLEXITY: O(n) increasing with size n of input string.
+ * 
+ * EXPLANATION:
+ *    Removes all non-alphanumeric characters from input string and 
+ * determines if the resulting string is a palindrome (words that 
+ * spell the same word when read in reverse). Returns true if the 
+ * input string is a palindrome, false if it is not a palindrome.
+ *
  * @param  {string} s
  * @return {boolean}
  */

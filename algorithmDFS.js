@@ -1,11 +1,13 @@
 /**
- * DEPTH-FIRST SEARCH (DFS) ALGORITHM: Javascript Implementation
+ * DEPTH-FIRST SEARCH (DFS) ALGORITHM: Javascript Implementation:
  * TIME COMPLEXITY: O(n) with n number of nodes in tree below starting node.
- * EXPLANATION: Finds the shortest path from a starting node to a target 
+ * 
+ * EXPLANATION: 
+ *    Finds the shortest path from a starting node to a target 
  * node. Given a starting node to begin searching from, DFS recursively 
  * searches the tree below the starting node and returns the node that 
  * contains the target value, or null if the target value isn't found.
- * 
+ *
  * @param  {node}  starting node to begin search from
  * @param  {value} target value to search tree below starting node for
  * @return {node}  or null if target value doesn't exist in tree

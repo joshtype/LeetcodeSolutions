@@ -1,8 +1,17 @@
 /**
- * LEETCODE PROBLEM: containsDuplicate Javascript Solution
- * Returns true if any value in the input array is repeated, false if all values are unique.
+ * LEETCODE PROBLEM: containsDuplicate Javascript Solution:
+ * TIME COMPLEXITY: O(n), increasing with size of input array.
+ * 
+ * EXPLANATION:
+ *    Sets can only contain unique elements. By passing the input array through
+ * a set constructor, any repeated elements in the array are dropped and are not
+ * to the set. Thus, the set's size and the array's length can only be equal if
+ * each element in the array was added to the set. If they are not equal, then
+ * one or more values in the array must have been a duplicate and not added to
+ * the set, resulting in a larger array length compared to set size. 
+ *
  * @param {number[]} nums
- * @return {boolean}
+ * @return {boolean} true if an element in input arr is duplicated, false otherwise
  */
 var containsDuplicate = function(nums) {
     // STEP 0: construct an empty set from the input array
@@ -13,13 +22,7 @@ var containsDuplicate = function(nums) {
 };
 
     /**
-     * Explanation:
-     * Sets can only contain unique elements. By passing the input array through a 
-     * set constructor, any repeated elements in the array are dropped and are not
-     * to the set. Thus, the set's size and the array's length can only be equal if
-     * each element in the array was added to the set. If they are not equal, then
-     * one or more values in the array must have been a duplicate and not added to
-     * the set, resulting in a larger array length compared to set size. 
+     
      */
 
 // STEP 2: define test parameters
