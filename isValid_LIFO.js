@@ -1,21 +1,28 @@
+/*
+LEETCODE PROBLEM : validParentheses (impl. as lifeBrackets); easy difficulty; Javascript
+TIME COMPLEXITY  : O(n), increasing with size n of the input string.
+SPACE COMPLEXITY : O(n/2).
+
+EXPLANATION:
+    This problem is a demonstration of 'Stack' data structures. Stacks use 
+    the 'Last in, First out' (or 'LIFO') principle of data access. This can be
+    compared to a stack of boxes. The box on top of the stack would be the last
+    box stacked, the most accessible, and the first one removed from the stack.
+
+EXAMPLE: 
+    If input = {([])}, output = true. If input = }{][(), output = false.
+
+NOTE ON DATA STRUCTURES:
+    There are no physical stacks (or heaps or maps or trees, etc)  
+    The stack (and all data structures) refer to the conceptualization of how the
+    data is stored, accessed, and manipulated, as well as the relationship between
+    referenced data.
+*/
+
+// BEGIN CODE:
 /**
- * LEETCODE VALID PARENTHESES JAVASCRIPT SOLUTION (impl as lifoBrackets):
- * TIME COMPLEXITY:  O(n), increasing with size n of the input string.
- * SPACE COMPLEXITY: O(n/2).
- *
- * EXPLANATION:
- *    This problem is a demonstration of 'Stack' data structures. Stacks use 
- * the 'Last in, First out' (or 'LIFO') principle of data access. This can be
- * compared to a stack of boxes. The box on top of the stack would be the last
- * box stacked, the most accessible, and the first one removed from the stack.
- *
- * NOTE ON DATA STRUCTURES:
- *    There are no physical stacks (or heaps or maps or trees, etc)  
- * The stack (and all data structures) refer to the conceptualization of how the
- * data is stored, accessed, and manipulated, as well as the relationship between
- * referenced data.
- *
- * EXAMPLE: Valid input = {([])}. Invalid = }{][().
+ * Iterate input string, determine if it starts with opening brackets and if each
+ * opening bracket has a matching closing bracket, return true if so, false if not.
  * @param {string} s
  * @return {boolean}
  */
@@ -86,3 +93,5 @@ console.log("TEST 1 = " + test1);  // expected output = true
 console.log("TEST 2 = " + test2);  // expected output = true
 console.log("TEST 3 = " + test3);  // expected output = false
 console.log("TEST 4 = " + test4);  // expected output = false
+
+// END CODE
