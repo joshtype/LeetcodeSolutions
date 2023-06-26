@@ -1,17 +1,21 @@
+/*
+LEETCODE PROBLEM : groupAnagrams; medium difficulty; Javascript
+TIME COMPLEXITY  : O(m*n); n = size of input arr; m = avg length of strings in the input arr.
+ 
+ EXPLANATION:
+    Iterate through input array of strings searching for anagrammatic words.
+    Add words that are anagrammatic to a shared array. Add each of these arrays
+    to another 2-D array. Return the 2-D array. All characters are lowercase and 
+    ordering of anagrams or the order of subarrs in the return arr doesnt matter.
+*/
+
+// BEGIN CODE:
 /**
- * LEETCODE PROBLEM : groupAnagrams
- * TIME COMPLEXITY  :
- * SPACE COMPLEXITY :
- * EXPLANATION:
- *    Iterate through input array of strings searching for anagrammatic words.
- * Add words that are anagrammatic to a shared array. Add each of these arrays
- * to another 2-D array. Return the 2-D array. All characters are lowercase and 
- * ordering of anagrams or the order of subarrs in the return arr doesnt matter.
- * 
+ * Searches an input arr of strings for anagrams, groups anagrammatic 
+ * strings an arr then returns an arr that contains the anagram arrays.
  * @param {string[]} strs
  * @return {string[][]}
  */
-
 const groupAnagrams = function(strs) {
     // keys = input arr elements split & sorted & values = arr of anagrammatic word
     let mappy = new Map;
@@ -48,4 +52,4 @@ let strArr2 = ["1", "+", "1", "==", "=", "two", "wot"];  // edge case
 console.log("TEST 2: EDGE CASE:");
 console.log(groupAnagrams(strArr2));
 
-
+// END CODE

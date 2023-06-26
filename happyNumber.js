@@ -1,11 +1,16 @@
+/*
+LEETCODE PROBLEM : happyNumber; easy difficulty; Javascript
+TIME COMPLEXITY  : O(n
+
+EXPLANATION:
+*/
+
+// BEGIN CODE:
 /**
  * @param {number} n
  * @return {boolean}
  */
-
- var isHappy = function(n) {
-    var happy = false;  // return value
-    var nums = {};      // to detect if loop is stuck
+var isHappy = function(n) {
     var arr = [];       // empty arr to store digits
     var sum = 0;        // to add sums of squared digits
 
@@ -26,10 +31,7 @@
         if(sum == 1) {
 
         }
-
-        
-        
-
-
     }
 };
+
+// END CODE

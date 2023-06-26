@@ -1,26 +1,28 @@
-// VERSION 2 WITH NOTES; UPDATED CODE; IMPROVED RUNTIME + READABILITY + ABSTRACTION; IMPROVED TESTING
-/**--------------------------------------------------------------------------------------+
- * LEETCODE PROBLEM: containsDuplicate in Javascript
- * TIME COMPLEXITY: O(n), increasing with size of input array.
- * 
- * FIRST SOLUTION EXPLANATION:
- *    Simplest solution to code & understand converts the input arr to a set then 
- * compares arr len vs set size. By passing the input arr as an argument to a set
- * constructor, it exploits the unique-values-only property of sets. The input arr
- * is iterated completely by the constructor, adding all unique values to the set.
- * Afterwards, if the input arr len != set size, there must have been a repeated
- * value not added to the set. If len = size, it follows that every element in the
- * input arr was unique.
- * 
- * SECOND SOLUTION EXPLANATION:
- *    The second solution is not quite as intuitive. The approach here uses a set
- * as a hashtable object. The main difference between this and the first solution is
- * that the first requires the entire arr to be iterated while hashtabling the
- * conversion allows the function to return true as soon as a duplicated value is
- * found in the input arr. This makes this approach exponentially faster for larger
- * arr lens, around n >= 10k. However, if there are no duplicates found.
- *--------------------------------------------------------------------------------------*/
+/*
+VERSION 2 WITH NOTES; UPDATED CODE; IMPROVED RUNTIME + READABILITY + ABSTRACTION; IMPROVED TESTING.
 
+LEETCODE PROBLEM : containsDuplicate; easy difficulty; Javascript
+TIME COMPLEXITY  : O(n), n = size of input array.
+ 
+FIRST SOLUTION EXPLANATION:
+    Simplest solution to code & understand converts the input arr to a set then 
+    compares arr len vs set size. By passing the input arr as an argument to a set
+    constructor, it exploits the unique-values-only property of sets. The input arr
+    is iterated completely by the constructor, adding all unique values to the set.
+    Afterwards, if the input arr len != set size, there must have been a repeated
+    value not added to the set. If len = size, it follows that every element in the
+    input arr was unique.
+ 
+SECOND SOLUTION EXPLANATION:
+    The second solution is not quite as intuitive. The approach here uses a set
+    as a hashtable object. The main difference between this and the first solution is
+    that the first requires the entire arr to be iterated while hashtabling the
+    conversion allows the function to return true as soon as a duplicated value is
+    found in the input arr. This makes this approach exponentially faster for larger
+    arr lens, around n >= 10k. However, if there are no duplicates found.
+*/
+
+// BEGIN CODE:
 /** 
  * FIRST SOLUTION USING SET CONSTRUCTION.
  * @param {number[]} nums
@@ -34,7 +36,7 @@ const setSolve = function(nums) {
 };
 
 /**
- * SECOND SOLUTION USING A SET OBJECT AS A HASHTABLE.
+ * SECOND SOLUTION USING A HASTABLE OBJECT.
  * @param  {number[]} nums 
  * @return {boolean} true if any element in input array is duplicated, else fale
  */
@@ -59,26 +61,26 @@ const hashSolve = function(nums) {
 };
 
 
-/**--------------------------------------------------------------------------------------+
- * TESTING:
- *    With testing, the first apprach (set constructions) is much faster if input arr 
- * is small to average size n. However, it becomes much more inefficient for large n, 
- * around n >= 10k. The benefit of returning early upon finding a duplicate rather
- * makes the second approach exponentially faster for n >= 10k. If it is not possible 
- * to guage input arr len or possibility of duplicates, the best approach would be the 
- * second.
- * 
- * REASONING:
- * 1) Assuming the input arr holds only integers, it is (infinity - 10k) times more
- *    probable for (n > 10k).
- * 2) If the input arr holds any numerical value, ints/floats/doubles, it becomes
- *    (infinity^2 - 10k) more probable for (n > 10k).
- * 3) If the input arr contains random values from the entire range of ints,
- *    (-inf, +inf), it is again (inf - 10k) times less likely that a value will be 
- *    duplicated. This grows if other number sets are included. However, this would 
- *    represent a rare situation, a true edge case. Thus, the stated benefits of the
- *    second approach stand.
- *--------------------------------------------------------------------------------------*/
+/*
+TESTING:
+    With testing, the first apprach (set constructions) is much faster if input arr 
+    is small to average size n. However, it becomes much more inefficient for large n, 
+    around n >= 10k. The benefit of returning early upon finding a duplicate rather
+    makes the second approach exponentially faster for n >= 10k. If it is not possible 
+    to guage input arr len or possibility of duplicates, the best approach would be the 
+    second.
+ 
+REASONING:
+    1) Assuming the input arr holds only integers, it is (infinity - 10k) times more
+        probable for (n > 10k).
+    2) If the input arr holds any numerical value, ints/floats/doubles, it becomes
+        (infinity^2 - 10k) more probable for (n > 10k).
+    3) If the input arr contains random values from the entire range of ints,
+        (-inf, +inf), it is again (inf - 10k) times less likely that a value will be 
+        duplicated. This grows if other number sets are included. However, this would 
+        represent a rare situation, a true edge case. Thus, the stated benefits of the
+        second approach stand.
+*/
 
 // import runtime testing library
 const { performance } = require("perf_hooks");
@@ -166,4 +168,5 @@ const solutionTEST = function() {
 
 // invoke testing within function to abstract data
 solutionTEST();
-// END OF FILE
+
+// END CODE

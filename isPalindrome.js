@@ -1,13 +1,17 @@
+/*
+LEETCODE PROBLEM : isPalindrome; easy difficulty; Javascript
+TIME COMPLEXITY  : O(n) increasing with size n of input string.
+
+EXPLANATION:
+    Removes all non-alphanumeric characters from input string and 
+    determines if the resulting string is a palindrome (words that 
+    spell the same word when read in reverse). Returns true if the 
+    input string is a palindrome, false if it is not a palindrome.
+*/
+
+// BEGIN CODE:
 /**
- * LEETCODE PROBLEM: isPalindrome Javascript Solution:
- * TIME COMPLEXITY: O(n) increasing with size n of input string.
- * 
- * EXPLANATION:
- *    Removes all non-alphanumeric characters from input string and 
- * determines if the resulting string is a palindrome (words that 
- * spell the same word when read in reverse). Returns true if the 
- * input string is a palindrome, false if it is not a palindrome.
- *
+ * Determines if the input string is a palindrome and return true if so. 
  * @param  {string} s
  * @return {boolean}
  */
@@ -38,3 +42,5 @@ var str3 = "98%";
 console.log(str1 + " is a palindrome = " + isPalindrome(str1));  // expected output = true
 console.log(str2 + " is a palindrome = " + isPalindrome(str2));  // expected output = true
 console.log(str3 + " is a palindrome = " + isPalindrome(str3));  // expected output = false
+
+// END CODE

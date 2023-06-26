@@ -1,23 +1,29 @@
+/*
+LEETCODE PROBLEM: maxProfit (impl. as maxDiff); easy difficulty; Javascript
+TIME COMPLEXITY: O(n), increasing with size n input array. 
+ 
+EXPLANATION:
+    Searches an input array (left -> right) for the min value and the max value that
+    appears right of min. Return the max difference between the two values. Return 0 if
+    determining the max difference isn't possible (e.g. if min is in array's last index).
+
+NOTE: 
+    This is a simplified implementation of the sliding window algorithm in which the
+    input arr = size n; subArrays = size k; and the number of subArrays = (n / k). In
+    this problem, k = 1, or each element is a subArray (ie the arr is its own subArray,
+    as in set theory where sets are subsets to themselves). This situation calls for the
+    largest difference between any two subArrays, commonly used for Sliding Window demos, 
+    with the added constraint that the max value must appear to the right of the min value
+    so it may not be the actual max value of the entire arr. Since k = 1 for each subArr, 
+    the resulting operation is simply subtracting Math.min() from the Math.max() to the 
+    right of Math.min().
+*/
+
+// BEGIN CODE:
 /**
- * LEETCODE PROBLEM: maxProfit (abstracted as maxDiff) Javascript Solution:
- * TIME COMPLEXITY: O(n), increasing with size n input array. 
- * 
- * EXPLANATION:
- *    Searches an input array (left -> right) for the min value and the max value that
- * appears right of min. Return the max difference between the two values. Return 0 if
- * determining the max difference isnt possible (e.g. if min is in array's last index).
- * 
- * NOTE: 
- *    This is a simplified implementation of the sliding window algorithm in which the
- * input arr = size n; subArrays = size k; and the number of subArrays = (n / k). In
- * this problem, k = 1, or each element is a subArray (ie the arr is its own subArray,
- * as in set theory where sets are subsets to themselves). This situation calls for the
- * largest difference between any two subArrays, commonly used for Sliding Window demos, 
- * with the added constraint that the max value must appear to the right of the min value
- * so it may not be the actual max value of the entire arr. Since k = 1 for each subArr, 
- * the resulting operation is simply subtracting Math.min() from the Math.max() to the 
- * right of Math.min().
- *
+ * Iterates input arr of numbers to determine the maximum difference between the least 
+ * value and the greatest value that appears to the right of the least. Returns the
+ * max difference or 0 if it's not possible to determine the max difference.
  * @param  {number[]} arr
  * @return {number} maximum possible difference (or 0)
  */
@@ -69,3 +75,4 @@ if(max2 > 0) {
     console.log("Test 2: Warning! Profit is not possible!");  
 }
 
+// END CODE

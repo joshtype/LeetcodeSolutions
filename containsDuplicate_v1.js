@@ -1,8 +1,8 @@
-/**-------------------------------------------------------------------------------------+
- * LEETCODE PROBLEM: containsDuplicate Two Solutions in Javascript:
- * TIME COMPLEXITY: O(n), increasing with size of input array.
- * VERSION 1
- *--------------------------------------------------------------------------------------*/
+/*
+VERSION 1: saved for demo of the differences between this and version 2.
+LEETCODE PROBLEM : containsDuplicate; easy difficulty; Javascript:
+TIME COMPLEXITY: O(n), increasing with size of input array.
+*/
 
 /**
  * FIRST SOLUTION USING SET CONSTRUCTION.
