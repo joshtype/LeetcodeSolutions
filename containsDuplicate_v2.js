@@ -34,7 +34,6 @@ const setSolve = function(nums) {
     // compare set size vs array length & return true if arr len != set size, else false
     return mySet.size !== nums.length;
 };
-
 /**
  * SECOND SOLUTION USING A HASTABLE OBJECT.
  * @param  {number[]} nums 
