@@ -3,11 +3,10 @@
     TIME COMPLEXITY  : O(n), where n increases with the size of the input arr.
 
     EXPLANATION:
-        1) imagine arr as three parts: current arr[i] / indices before arr[i] / indices after arr[i]
-        2) arr[i] will change to the product of all elements in the arr except arr[i]
-        3) arr[i] = product of all elements before arr[i] * product of all elements after arr[i]
-        *) constraint #1: correct products will fit within a 32-bit integer
-        *) constraint #2: solution cannot include any division operators
+        1) arr = 3 groups: arr[i], i < arr[i], i > arr[i]
+        2) arr[i] reassigned to (i < arr[i] * i > arr[i])
+        *) constraint: products will fit a 32-bit integer
+        *) constraint: cannot use any division operations
 
     Eg) if input arr = [1, 2, 3, 4] then output = [(2*3*4), (1*3*4), (1*2*4), (1*2*3)] 
 */
