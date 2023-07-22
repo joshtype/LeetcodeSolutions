@@ -20,58 +20,66 @@
         There are methods of indirect detection, though applicability 
         varies with context of the application or given data.
 
-        I use Sets in my solution to store values of n, starting with the
-        raw input value of n and then attempting to add each n after it is
-        reassigned to the sum of its squared digits. For any non-negative,
-        non-zero input n that can be reduced to 1, the sum will never be a
-        duplicated value. For input that cannot reduce to 1, n will cycle
-        between a set of values infinitely, as in the above example. This
-        makes Sets the best tool to detect and exit an infinite loop. The
-        attempt to add n to the Set can be used in a boolean conditional:
-        if Set.has(n) returns true or false. If true, then n is repeating
-        and is looping infinitely, and the loop can be broken. If false, 
-        the loop can continue execution. Maps could also work to this end,
-        but for the context of this problem, there is no relevant data to 
-        pair with n.
+        The solution below implements Sets to store values of n, from the
+        raw input value of n to each n value after its value is set equal
+        to the sum of its digits squared. For all non-negative & non-zero 
+        input values of n that will eventually reduce to 1, the sum of the
+        digits squared will never be duplicated. For all such n that aren't
+        able reduce to 1, n will be duplicated eventually as the loop runs
+        infinitely.
+        
+        Checking if Set.has(n) can be used as a boolean conditional, such
+        as: if Set.has(n) = true, continue; if false, then exit loop. This
+        prevents loops that could execute infinitely from doing so. A Map 
+        would also do this, but since no relevent data exists that should
+        logically be paired with n, Sets remain the best choice.
 */
 
-function squareSum(n) {
-    // base case: n = happy
+/**
+ * Evaluate n using a loop that resets n = sum of 
+ * its digits squared. If the loop ends & n = 1, n
+ * is happy. If the loop never ends, ie is infinite,
+ * then it is unable to set n = 1 & n is not happy.
+ * 
+ * @param  {number} n non-negative, non-zero integer
+ * @return {boolean}  true if n = happy, else false
+ */
+const squareSum = function(n) {
+    // 0: check base case n = 1
     if(n === 1) {
         return true;
     }
-
-    // declare set to store unique n values
+    // 1: if n != 1, declare empty Set to store values of n
     const loopCheck = new Set();
 
-    // check for inf loop
+    // 2: check if the current value of n is in the Set
     while(!loopCheck.has(n)) {
-        // if not present, add n to set
+        // if n is not present, add n to the set
         loopCheck.add(n);  
 
-        // get sum of squares of n
-        let next = 0;  // store sum of squared digits
+        // 3: calculate the sum of n's digits squared
+        let sum = 0;  // resets ea loop, increments sum
+
         while(n !== 0) {
-            // get next digit
-            const dgt = (n % 10);
-            // square digit
-            next += dgt * dgt;
-            // remove digit
-            n = Math.floor(n / 10);
-            // reloop
+            const dgt = (n % 10);    // get next digit of n
+            sum += dgt * dgt;        // square digit, increment sum
+            n = Math.floor(n / 10);  // move to next digit if present
+            // reloops if 2+ digits remaining, loop breaks if n = single digit
         }
-        n = next;  // next number for reloop
+        n = sum;  // set n = to sum of its digits squared
         
-        // base case: n = happy
+        // 4: recheck base case n = 1
         if(n === 1) {
             return true;
         }
-        /* if n !== 1, it reloops, adding n to set, until
-           loop breaks when n is present in set or n = 1 */
+        // If n !== 1, a reloop is triggered & checks the set to see if n was previously added.
+        // If n isn't in set, its added, sum resets to 0 & the inner loop executes until n = 0.
+        // If n is present in set, the loop is cycing infinitely, and n will never reduce to 1.
     }
-    // base case: n in set
+    // 2: base case n != 1 & loop = infinite
     return false;
-}
+};
 
-console.log(squareSum(19));  // true
-console.log(squareSum(15));  // false
+// 5: testing
+console.log("TEST 1: n is happy = " + squareSum(19));  // expected output = true
+console.log("TEST 2: n is happy = " + squareSum(15));  // expected output = false
