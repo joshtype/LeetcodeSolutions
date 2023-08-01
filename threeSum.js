@@ -1,7 +1,11 @@
 /*
     LEETCODE PROBLEM: threeSum; Medium Difficulty; Javascript
-    TIME COMPLEXITY : 
-    SPACE COMPLEXITY:
+    TIME COMPLEXITY : O(n^2) where n = the length of the input
+                      that must be iterated  twice with a while
+                      loop nested within a for-loop.
+    SPACE COMPLEXITY: O(n) where n = the length of the input arr
+                      that must be sorted, with no additional data 
+                      structures used.
 
     EXPLANATION:
         Iterate an input arr of ints to find any and all triplets that sum to 0.
