@@ -73,10 +73,13 @@ var threeSum = function(nums) {
 
 // Testing
 let nums1 = [-1,0,1,2,-1,-4];
-console.log(threeSum(nums1));  // expected output = [[-1,-1,2],[-1,0,1]]
+console.log(threeSum(nums1));  
+    // expected output = [[-1,-1,2],[-1,0,1]]
 
 let nums2 = [0,0,0]; 
-console.log(threeSum(nums2));  // expected output = []
+console.log(threeSum(nums2));  
+    // expected output = [0,0,0]
 
 let nums3 = [0,1,1];
-console.log(threeSum(nums3));  // expected output = [0,0,0]
+console.log(threeSum(nums3));  
+    // expected output = []
